@@ -1,5 +1,6 @@
 const oracledb = require('oracledb')
-require('dotenv').configDotenv({ path: '../.env' })
+// require('dotenv').configDotenv({ path: '../.env' }) // Quando for executado de dentro de uma pasta para um nível acima do raiz
+require('dotenv').config() //Quando for executado a partir de nível raiz
 
 module.exports = class Database {
     

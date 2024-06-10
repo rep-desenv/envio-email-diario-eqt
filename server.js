@@ -81,8 +81,15 @@
 // run()
 
 
-import notasLimbo from './notas-limbo/notas-limbo.js'
-import falhaRotinaSobra from './falha-rotina-sobra/falha-rotina-sobra.js'
+// import notasLimbo from './notas-limbo/notas-limbo.js'
+// import falhaRotinaSobra from './falha-rotina-sobra/falha-rotina-sobra.js'
+// 
+// await falhaRotinaSobra.run()
+// await notasLimbo.run()
 
-await falhaRotinaSobra.run()
-await notasLimbo.run()
+
+const notasLimbo = require('./src/notas-limbo')
+const falhaRotinaSobra = require('./src/falha-rotina-sobra')
+
+notasLimbo.run()
+falhaRotinaSobra.run()

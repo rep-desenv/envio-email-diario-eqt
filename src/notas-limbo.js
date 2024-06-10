@@ -27,4 +27,6 @@ const run = () => {
         sql)
 }
 
-run()
+// run()
+
+module.exports = {run}
