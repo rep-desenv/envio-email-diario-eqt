@@ -87,9 +87,17 @@
 // await falhaRotinaSobra.run()
 // await notasLimbo.run()
 
+function sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
-const notasLimbo = require('./src/notas-limbo')
-const falhaRotinaSobra = require('./src/falha-rotina-sobra')
+sleep(0).then(()=>{
+    const notasLimbo = require('./src/notas-limbo')
+    notasLimbo.run()
+})
 
-notasLimbo.run()
-falhaRotinaSobra.run()
+sleep(20000).then(() => {
+    const falhaRotinaSobra = require('./src/falha-rotina-sobra')
+    falhaRotinaSobra.run()
+})
+
